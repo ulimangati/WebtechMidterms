@@ -1,0 +1,42 @@
+use world;
+-- Q14 -- 
+
+
+-- Q15 -- 
+#a 
+SELECT name Country, Continent, GNP FROM country WHERE GNP > 20000;
+#b
+SELECT name Country, Continent, GNP FROM country WHERE GNP > 20000 ORDER BY Continent, GNP DESC;
+#c 
+SELECT Continent, Region, name Country, GNP "Current GNP" FROM country WHERE GNPold IS NULL AND GNP > 0 AND governmentform LIKE '%territory%';
+#d 
+SELECT Region, name Country, Population FROM country WHERE continent IN ('Africa') ORDER BY Region, Population DESC;
+#e 
+SELECT Continent, name Country, SurfaceArea AS 'Surface Area'  FROM country WHERE NOT (Continent ='North America' OR Continent = 'Europe') ORDER BY Continent, SurfaceArea;
+
+-- Q16 -- 
+SELECT name Country, GNPold "Previous GNP", GNP "Current GNP", GNPold-GNP "Increase" FROM country WHERE GNPold AND GNP IS NOT NULL ORDER BY Increase ASC;
+
+-- Q17 -- 
+
+
+
+-- Q18 -- 
+
+
+
+
+-- Q19 -- 
+#a 
+SELECT name Country, HeadofState, GovernmentForm "FormOfGovernment", Population FROM country WHERE GovernmentForm LIKE '%republic%' AND Population > 100000 ORDER BY GovernmentForm ASC, Population DESC;
+#b 
+SELECT name Country,GovernmentForm "FormOfGovernment", Region, Population, SurfaceArea "Surface Area" FROM country WHERE GovernmentForm NOT LIKE '%republic%' ORDER BY region, Population ASC;
+#c 
+SELECT name Country, GovernmentForm "FormOfGovernment", Population, SurfaceArea "Surface Area" FROM country WHERE GovernmentForm NOT LIKE '%republic%' AND population > 0;
+#d 
+SELECT CountryCode, Name, District From city WHERE Name LIKE '%_% %_%' ORDER BY CountryCode, Name;
+#e 
+SELECT Name, District FROM city WHERE CountryCode = 'PHL' AND name LIKE '%_% %_%' ORDER BY length(name );
+
+-- Q20 -- 
+SELECT name Country, GNP, indepyear "Year of Independence", ;
