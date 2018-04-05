@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <meta charset="UTF-8">
+	   <link rel="stylesheet" type="text/css" href="Style.css">
+      <script type="text/javascript" src="bsg.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	   <link href="https://fonts.googleapis.com/css?family=Bellefair|Krona+One|Open+Sans|PT+Sans|Roboto+Slab" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed|Jua|Lato|Raleway|Source+Sans+Pro|Syncopate:700" rel="stylesheet">
+        <title>Basketball Statistics Generator</title>
+    </head>
+    
+<body>
+    <header>
+        <a href="index.html">   
+            <img id="banner" src="banner.jpg" align="middle" alt="Site Banner"> </a>
+    </header>
+    <div id="tp"></div>
+    <nav class="topnav">
+        <li>
+		<a class="current" href="index.html">Home</a>
+        <a id="abt" href="about-us.html">How BSG works?</a>
+        <a href="contact.html">Support Us</a>
+        </li>         
+    </nav>
+
+    <div class="leftscore">
+        <canvas id="Score1" width="200" height="80" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element.
+        </canvas>
+    </div>
+
+    <div class="rightscore">
+        <canvas id="Score2" width="200" height="80" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element.
+        </canvas>
+    </div>
+
+    <script>
+        var canvas = document.getElementById("Score1");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("SCORE:",10,50);
+
+var canvas = document.getElementById("Score2");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("SCORE:",10,50);
+</script>
+    <div class="left">
+<table class="tg">
+  <tr>
+    <th class="tname" colspan="8">Team Name:<input type="text"></th>
+  </tr>
+  <tr>
+    <td class="thead">Player Name</td>
+    <td class="thead">No.</td>
+    <td class="thead">Points</td>
+    <td class="thead">Assist</td>
+    <td class="thead">Rebound</td>
+    <td class="thead">3pt-made</td>
+    <td class="thead">Foul-made</td>
+    <td class="thead">TF-made</td>
+  </tr>
+     <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+</table>
+
+
+    </div>
+    <div class="right">
+<table class="tg">
+  <tr>
+    <th class="tname" colspan="8">Team Name:<input type="text"></th>
+  </tr>
+  <tr>
+    <td class="thead">Player Name</td>
+    <td class="thead">No.</td>
+    <td class="thead">Points</td>
+    <td class="thead">Assist</td>
+    <td class="thead">Rebound</td>
+    <td class="thead">3pt-made</td>
+    <td class="thead">Foul-made</td>
+    <td class="thead">TF-made</td>
+  </tr>
+     <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+  <tr>
+    <td class="tline"><input type="text"></td>
+    <td class="tline"></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+    <td class="tline"><button type="button" onclick="addfunction">+</button></td>
+  </tr>
+</table>
+    </div>
+   
+ 
+</body>
+</html>
+
+
+
+	
