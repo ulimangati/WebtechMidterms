@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+html, body {
+ background-color: cornsilk;
+  margin: 5px;
+  
+}
+table, td {
+    width: 30%;
+    border-style: none;
+    padding: 4px;
+    text-align: center;
+    border-collapse: collapse;
+}
+#dataTable{
+	 width: 350px;
+	 cellpadding: 0; 
+	 cellspacing: 0;
+	 margin: 10px auto;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: flex;
+    padding: 2px;
+}
+
