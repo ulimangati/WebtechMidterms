@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            background: red;
+            margin: 5px;
+        }
+
+        table {
+            border: 2px solid black;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid lightgrey;
+        }
+
+    </style>
+
+    <script>
+
+        function createTable() {
+            var a;
+
+            a = document.getElementById('tb1').value;
+var length = document.getElementById('table').rows.length;
+            if (a == "") {
+                alert("Enter Numeric value of rows to be generated");
+            } else {
+              if(length > 1){
+                
+                var table = document.getElementById("table");
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(length);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+
+                cell1.innerHTML = "<input type='text' name='" + "name".concat(length+1) + "'>";
+                 cell2.innerHTML = "<input type='text' name='" + "name".concat(length+1) + "'>";
+                 
+              } else {
+                var rows = "<tr><th>Jersey Number</th><th>Player Name</th></tr>";
+                for (var i = 0; i < a; i++) {
+                    rows += "<tr><td><input type='text' name='" + "name".concat(i+1) + "'></td><td><input type='text' name='" + "quantity".concat(i+1) + "'></td></tr>";
+
+                }
+
+                document.getElementById("table").innerHTML = rows;
+                }
+
+            }
+        }
+        function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV file
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // Create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Hide download link
+    downloadLink.style.display = "none";
+
+    // Add the link to DOM
+    document.body.appendChild(downloadLink);
+
+    // Click download link
+    downloadLink.click();
+}
+function exportTableToCSV(filename) {
+    var csv = [];
+    var rows = document.querySelectorAll("table tr");
+    
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th", "tr");
+        
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        
+        csv.push(row.join(","));        
+    }
+
+    // Download CSV file
+    downloadCSV(csv.join("\n"), filename);
+}
+var divValue, values = '';
+
+    function GetTextValue() {
+        $(divValue) 
+            .empty() 
+            .remove(); 
+        
+        values = '';
+
+        $('.input').each(function() {
+            divValue = $(document.createElement('div')).css({
+                padding:'5px', width:'200px'
+            });
+            values += this.value + '<br />'
+        });
+
+        $(divValue).append('<p><b>Your selected values</b></p>' + values);
+        $('body').append(divValue);
+    }
+    </script>
+</head>
+<body>
+
+<p>How many players: <input type="text" id="tb1"/><button type="button" onclick='createTable()'>add!</button></p>
+
+<table id="table" class="order-table table"  name="table1" required>
+</table>
+<button onclick="exportTableToCSV('Players.txt')">Export HTML Table To CSV File</button>
+
+</body>
+</html>
