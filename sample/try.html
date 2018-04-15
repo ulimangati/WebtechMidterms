@@ -52,9 +52,11 @@ var cell2 = row.insertCell(1);
 
                 document.getElementById("table").innerHTML = rows;
                 }
-
             }
         }
+
+   
+    
         function downloadCSV(csv, filename) {
     var csvFile;
     var downloadLink;
@@ -96,34 +98,14 @@ function exportTableToCSV(filename) {
     // Download CSV file
     downloadCSV(csv.join("\n"), filename);
 }
-var divValue, values = '';
 
-    function GetTextValue() {
-        $(divValue) 
-            .empty() 
-            .remove(); 
-        
-        values = '';
-
-        $('.input').each(function() {
-            divValue = $(document.createElement('div')).css({
-                padding:'5px', width:'200px'
-            });
-            values += this.value + '<br />'
-        });
-
-        $(divValue).append('<p><b>Your selected values</b></p>' + values);
-        $('body').append(divValue);
-    }
     </script>
 </head>
 <body>
 
-<p>How many players: <input type="text" id="tb1"/><button type="button" onclick='createTable()'>add!</button></p>
-
+<label>How many players: <input type="text" id="tb1"/><button type="button" onclick='createTable()'>add!</button></label>
 <table id="table" class="order-table table"  name="table1" required>
 </table>
-<button onclick="exportTableToCSV('Players.txt')">Export HTML Table To CSV File</button>
-
+<button onclick="exportTableToCSV('Players.csv')">Export HTML Table To CSV File</button>
 </body>
 </html>
