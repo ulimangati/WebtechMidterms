@@ -1,0 +1,106 @@
+[
+  {
+    "createdBy": "AYSYxWlwtTbDwYuvXygtuOC4j7K2",
+    "css": "* html, body{\n  margin: 2px;\n  padding: 5px;\n  background-color: navy;\n}\n.header{\n  border: black solid;\n  height:75px;\n  width: auto;\n}\n\n#banner{\n  height:200px;\n  width:auto;\n}\n\n.teams{\n  background-color: skyblue;\n  border:black solid 2px;\n  margin-top: 5%;\n  height: 400px;\n  text-align:center;\n \n  \n}\n\n#team1{\n  width: 40%;\n  float:left;\n  margin-left: 8%;\n  display:inline-axis;\n \n}\n\n#team2{\n  width: 40%;\n  float: right;\n  margin-right: 8%;\n display: inline-axis;\n \n\n}\n\n#teamNum{\n border: black solid 2px;\n  padding: 5%;\n  padding-bottom:20%;\n  margin: 20px;\n  margin-top:15%;\n  margin-left:15%;\n  margin-right:15%;\n}\n\n#teamName{\n  color: white;\n  background-color: grey;\n  float:left;\n  border: black solid 2px;\n  margin-top: 20%;\n  margin-left:10%;\n  padding:3%;\n  display:inline-block;\n  position:relative;\n}\n#teamRooster{\n  color:white;\n  background-color:grey;\n  float:right;\n  border: black solid 2px;\n  margin-top: 20%;\n  margin-right:10%;\n  padding:3%;\n  position:relative;\n  \n}\n#Start{\n  margin-left: 45%;\n  margin-top: 5%;\n display:inline-block;\n  color:white;\n  background-color:red;\n  border: black solid 2px;\n  padding:3%;\n  display:inline-axis;\n}\n\n\n\n",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n <title>Basketball Stastics Generator</title>\n  </head>\n  \n  <body>\n    <header class=\"header\"><img src=\"My Post.jpg\" id=\"banner\" ></header>\n    \n    <div class=\"teams\" id=\"team1\">\n      <p id=\"teamNum\">Team 1</p>\n      <button id=\"teamName\">Edit Team Name</button>\n      <button id=\"teamRooster\">See Rooster</button>\n    </div>\n    \n    <div class=\"teams\" id=\"team2\">\n      <p id=\"teamNum\">Team 2</p>\n      <button id=\"teamName\">Edit Team Name</button>\n      <button id=\"teamRooster\">See Rooster</button>\n    </div>\n    \n    <div>\n      <button class=\"button\" id=\"Start\">S T A R T\n      </button>\n    </div>\n  </body>\n</html>",
+    "htmlMode": "html",
+    "id": "item-33wo4xD97E",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      38.0105,
+      61.0823
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(50.3415% - 6px)",
+      "calc(16.2965% - 3px)"
+    ],
+    "title": "index 1.2",
+    "updatedOn": 1523047831327
+  },
+  {
+    "createdBy": "AYSYxWlwtTbDwYuvXygtuOC4j7K2",
+    "css": "* html, body{\nbackground-color: cornsilk;\nmargin:5px;\npadding: 10px+;\n \n}\n.header{\n  float:center;\n  text-align: center;\n  width: 100%;\n}\n#logo{\n  width: 100%;\n  height: 110px;\n}\n\n#team1{\n  float:left;\n  border: black solid 3px;\n  text-align:center;\n  margin-top: 40px;\n  margin-left: 5%;\n  width: 40%;\n  height:350px;\n  display: inline-block;\n  \n\n}\n#team2{\n  float:right;\n  border: black solid 3px;\n  text-align:center;\n  margin-top: 40px;\n  margin-right: 5%;\n  width: 40%;\n  height:350px;\n  display: inline-axis;\n}\n\n#TeamNum{\n  border: black solid 2px;\n  margin: 50px;\n  height:20%;\n}\n\n#TeamName{\n  float:left;\n  border: black solid 2px;\n  margin-left:10%;\n  padding:10px;\n\n}\n\n#TeamRooster{\n  float: right;\n  border: black solid 2px;\n  margin-right:10%;\n  padding: 10px;\n\n  .start{\n    position:fixed;\n    float: center;\n    margin-top: 50%;\n    margin-left: 50%;\n    \n  }\n  \n  \n  ",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n <title>Basketball Stastics Generator</title>\n  </head>\n<body>\n\n  <header class=\"header\"><img id=\"logo\" src=\"My Post.jpg\"></header>\n    \n      <div  id=\"team1\">\n        <p id=\"TeamNum\">Team 1</p>\n        <p id=\"TeamName\">Edit Team Name</p>\n        <p id=\"TeamRooster\">See Rooster</p>\n    </div>\n\n    <div  id=\"team2\">\n        <p id=\"TeamNum\">Team 2</p>\n        <p id=\"TeamName\">Edit Team Name</p>\n        <p id=\"TeamRooster\">See Rooster</p>\n    </div>\n    \n  <div class=\"start\">\n    <button class=\"button start\">S T A R T</button>\n  </div>\n  \n \n</body>\n</html>",
+    "htmlMode": "html",
+    "id": "item-8YvPMBfLnu",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50.0659,
+      49.8538
+    ],
+    "sizes": [
+      "calc(60.0368% - 3px)",
+      "calc(33.2844% - 6px)",
+      "calc(6.62983% - 3px)"
+    ],
+    "title": "Untitled 5-4-21:18",
+    "updatedOn": 1523042407779
+  },
+  {
+    "createdBy": "AYSYxWlwtTbDwYuvXygtuOC4j7K2",
+    "css": "html,body{\n    text-align : center;\n    margin: 0px;\n    padding: 0px;\n\t}\n.mainHeader{\n  background-color: gold;\n  font-size: 25px;\n}\n\n.logo{\n  float: right;\n}\n\n\n\n\n",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<!DOCTYPE html>\n<html>\n<head lang=\"en\">\n\t<meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\t<title>Saint Louis University</title>\n</head>\n  <header class=\"mainHeader\">Saint Louis University </header>\n  <img class=\"logo\"src=\"Slu2.png\"></img>\n \n<body>\n  <div class=\"information\">\n    \n  </div>\n\t\n</body>\n</html>",
+    "htmlMode": "html",
+    "id": "item-BGShqkY8F7",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(57.6864% - 3px)",
+      "calc(36.2658% - 6px)",
+      "calc(6.05042% - 3px)"
+    ],
+    "title": "first",
+    "updatedOn": 1521912379224
+  },
+  {
+    "createdBy": "AYSYxWlwtTbDwYuvXygtuOC4j7K2",
+    "css": "* html, body{\n  background-color:cornsilk;\n  margin: 10px;\n  padding:5px;\n  text-align:center;\n}\nheader{\n  border:navy solid 5px;\n  float:center;\n  display:inline-axis;\n  text-align:center;\n  font-family:sans-serif;\n  font-weight: bolder;\n  font-size: 25px;\n}\n\n.logo{\n  float:left;\n  position: relative;\n}\n\n#team1{\n  background-color:skyblue;\n  float:left;\n  margin-top:40px;\n  height:338px;\n  width:40%;\n  text-align:center;\n  border:grey solid 5px;\n  padding:20px;\n  \n \n}\n#T1name{\n  background-color:white;\n  border:black solid 2px;\n  padding:50px;\n  display:inline-block\n}\n#T1{\n  background-color:white;\n  border:black solid 2px;\n  padding:2px;\n  \n}\n#T1r{\n  background-color:white;\n  border:black solid 2px;\n  padding:2px;\n\n}\n\n#team2{\n  background-color:rosybrown;\n  border: gray solid 5px;\n  float:right;\n  margin-top:40px;\n  height:338px;\n  width:40%;\n  text-align:center;\n  padding:20px;\n  \n}\n#T2name{\n  background-color:white;\n  border:black solid 2px;\n  padding:50px;\n  display:inline-block\n}\n#T2{\n  background-color:white;\n  border:black solid 2px;\n  padding:2px;\n  \n}\n#T2r{\n  background-color:white;\n  border:black solid 2px;\n  padding:2px;\n\n}\n\n/*#start{\n  margin-top:450px;\n  float:center;\n  height:20px;\n  width: 80px;\n  background-color: pink;\n  border:red solid 2px;\n  padding: 10px;\n  margin-left:43%;\n  font-family: sans-serif;\n  font-weight:bolder;\n  \n  \n  \n}*/\n\nbutton{\n  margin-top: 4opx;\n}\n\n\n",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width,  initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <title>Basketball Statistics Generator</title>\n      \n    </head>\n\n<body>\n <header><img class=\"logo\" src= \"https://simple.wikipedia.org/wiki/Basketball\"></img>Basketball Statistics Generator</header>\n  \n  <div id=\"team1\">\n  <p class=\"TeamName\" id=\"T1name\">Team 1</p>\n  <p class=\"EditTeamName\" id=\"T1\">Edit Team Name</p>\n  <p class=\"TeamRooster\" id=\"T1r\">See Rooster</p>\n  </div>\n  <div id=\"team2\">\n  <p class=\"TeamName\" id=\"T2name\">Team 2</p>\n  <p class=\"EditTeamName\" id=\"T2\">Edit Team Name</p>\n  <p class=\"TeamRooster\" id=\"T2r\">See Rooster</p>\n  </div>\n  \n \n <button type=\"button\" onclick=\"alert('Hello world!')\" >S T A R T</button>\n \n \n</body>\n</html>",
+    "htmlMode": "html",
+    "id": "item-vPThpoPUWU",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      42.5329,
+      57.4591
+    ],
+    "sizes": [
+      "calc(54.0541% - 3px)",
+      "calc(39.8226% - 6px)",
+      "calc(6.08108% - 3px)"
+    ],
+    "title": "index",
+    "updatedOn": 1522937892390
+  }
+]
