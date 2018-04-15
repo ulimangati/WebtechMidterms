@@ -1,46 +1,46 @@
 html{
-    width: 100%;
+    width: 100vw;
 }
 body {
     background: #215463e3;
-    margin: 0px;
-    border: 0px;
+    margin: 0vw;
+    border: 0vw;
     font-family: 'Open Sans', sans-serif;
     color: white;
     line-height: 1;
 }
 
 #banner{
-    width: 100%;
+    width: 100vw;
     opacity: 8;
-    padding-bottom: 2px;
+    padding-bottom: 2vw;
 }
 
 #tp {
     background-color: white;
-    padding-top: 1px;
+    padding-top: 1vw;
 }
 .topnav {
     background-color: transparent;
     overflow: hidden;
     opacity: 9;
-    width: 100%;
+    width: 100vw;
     text-align: left;
     height: auto;
     margin-top: auto;
     list-style-type: none;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
-    padding-top: 10px;
-    padding-bottom: 10px;  
+    padding-top: 10vw;
+    padding-bottom: 10vw;  
     opacity: 1;
 
 }
 .topnav a {
     color: #e4d4d4;
-    padding: 10px 16px;
+    padding: 10vw 16vw;
     text-decoration: none;
-    font-size: 150%;
+    font-size: 150vw;
    
 }
 .topnav a li{
@@ -59,30 +59,30 @@ body {
 
 .left {
     float: left;
-    width: 50%;
+    width: 50vw;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 10vw;
 }
 
 .right {
-    width: 50%;
+    width: 50vw;
     float: right;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 10vw;
 }
 
 .leftscore {
     float: left;
-    width: 50%;
+    width: 50vw;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 10vw;
 }
 
 .rightscore {
-    width: 50%;
+    width: 50vw;
     float: right;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 10vw;
 }
 
 .tg  {
@@ -92,9 +92,10 @@ body {
 }
 .tg td{
     font-family:Arial, sans-serif;
-    font-size:14px;padding:10px 5px;
+    font-size:1vw;
+    padding:10vw 5vw;
     border-style:solid;
-    border-width:1px;
+    border-width:1vw;
     overflow:hidden;
     word-break:normal;
     border-color:#aabcfe;
@@ -103,11 +104,11 @@ body {
 }
 .tg th{
     font-family:Arial, sans-serif;
-    font-size:14px;
+    font-size:1vw;
     font-weight:normal;
-    padding:10px 5px;
+    padding:10vw 5vw;
     border-style:solid;
-    border-width:1px;
+    border-width:1vw;
     overflow:hidden;
     word-break:normal;
     border-color:#aabcfe;
@@ -139,4 +140,74 @@ body {
 button {
     float: left;
 }
+.start{
+	margin-top: 1vw;
+    border: .24vw solid gray;
+    padding: .10vw;
+    border-radius: 2.96vw;
+	width: 30vw;
+	font-size: 2vw;
+	font-family: Impact, fantasy;
 
+	
+	
+}
+.start:hover {
+	background:#B0C4DE;
+}
+.How {
+    border: .24vw solid gray;
+    padding: .10vw;
+    border-radius: 2.96vw;
+	width: 30vw;
+	font-size: 2vw;
+	font-family: Impact, fantasy;
+	
+
+}
+.How:hover{
+	background:#B0C4DE;
+}
+.Exit{
+	
+    border: .24vw solid gray;
+    padding: .10vw;
+    border-radius: 2.96vw;
+	width: 30vw;
+	font-size: 2vw;
+	font-family: Impact, fantasy;
+	
+}
+.Exit:hover{
+	background:#B0C4DE;
+}
+.centerborder{
+	font-size: 3.55vw;
+border-radius: 2.96vw;
+    background: #EBECE6;
+    padding: 2.37vw;
+    width: 40.24vw;
+    height: 27.32vw;
+	text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
