@@ -23,7 +23,7 @@
               } else {
                 var rows = "<tr><th>Jersey Number</th><th>Player Name</th></tr>";
                 for (var i = 0; i < a; i++) {
-                    rows += "<tr><td><input type='text' name='" + "name".concat(i+1) + "'></td><td><input type='text' name='" + "quantity".concat(i+1) + "'></td></tr>";
+                    rows += "<tr><td><input type='text' name='" + "JerseyNumber".concat(i+1) + "'></td><td><input type='text' name='" + "name".concat(i+1) + "'></td></tr>";
 
                 }
 
