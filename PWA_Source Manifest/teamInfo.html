@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD lang="en">
+	<meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BSG</title>
+<header>
+        <a href="index.html">   
+            <img id="banner" src="banner.jpg" align="middle" alt="Site Banner"> </a>
+    </header>
+</HEAD>
+<BODY>
+	<link rel="stylesheet" type="text/css" href="CSS/info.css">
+	<SCRIPT language="javascript">
+		function addRow(tableID) {
+
+			var table = document.getElementById(tableID);
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var colCount = table.rows[0].cells.length;
+
+			for(var i=0; i<colCount; i++) {
+
+				var newcell	= row.insertCell(i);
+
+				newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+				switch(newcell.childNodes[0].type) {
+					case "text":
+							newcell.childNodes[0].value = "";
+							break;
+					case "checkbox":
+							newcell.childNodes[0].checked = false;
+							break;
+					case "select-one":
+							newcell.childNodes[0].selectedIndex = 0;
+							break;
+				}
+			}
+		}
+
+		function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					if(rowCount <= 1) {
+						alert("Cannot delete all the rows.");
+						break;
+					}
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+	</SCRIPT>
+
+<div class="teamNameCount">
+  <form id="nameForm"action="/action_page.php">
+    <input type="text" name="teamName" id="teamName" placeholder="Enter Team Name Here">
+     <br>
+       <p id="tm">Type Your Team Name</p>
+  </form>
+  
+  <div id="tabCont">
+     
+	<TABLE id="dataTable">
+
+		<TR>
+			<TD><INPUT type="checkbox" name="chk" id="chckbx"/></TD>
+			<TD><INPUT type="text" name="txt" id="jerseyNum" placeholder="Enter Jersey Number"/></TD>
+			<TD><INPUT type="text" name="txt" id="pName" placeholder="Enter Player Name"/></TD>
+			
+		</TR>
+	</TABLE>
+    <div class="wrapper">
+	<INPUT type="button" class="button" value="Add Player" onclick="addRow('dataTable') " /> 
+  <INPUT type="button" class="button" value="Delete Player" onclick="deleteRow('dataTable')" />
+</div>
+  </div>
+  <INPUT type="button" class="button" id="apply" value="Apply" onclick="addRow('dataTable') " />
+</div>
+
+
+
+</BODY>
+</HTML>

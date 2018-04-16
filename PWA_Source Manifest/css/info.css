@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+html, body {
+    background: #215463e3;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    line-height: 1;
+
+}
+table, td {
+    width: 30%;
+    border-style: none;
+    padding: 4px;
+    text-align: center;
+    border-collapse: collapse;
+}
+#dataTable{
+	 width: 350px;
+	 cellpadding: 0; 
+	 cellspacing: 0;
+	 margin: 10px auto;
+}
+
+.wrapper {
+    text-align: center;
+    margin-bottom: 1.5vw;
+    margin-top:3vw;
+    font-size: 1.5vw;
+}
+
+.button {
+    position: flex;
+    padding: 2px;
+    height:3vw;
+    width:15vw;
+    font-size: 1.5vw;
+}
+
+#banner{
+    width: 100%;
+    opacity: 8;
+    padding-bottom: 2px;
+}
+
+.teamNameCount{
+  margin-top: 3vw;
+  padding-top: 2vw;
+  border: black solid 2px;
+  text-align:center;
+}
+
+#teamName{
+  height:4vw;
+  width:30vw;
+  margin-bottom:1vw;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#tabCont{
+  border: black solid 2px;
+  margin: 35px;
+  height: auto;
+  
+}
+#tm{
+  font-size: 1.5vw;
+  
+}
+
+#jerseyNum{
+  height: 2.5vw;
+  width: 20vw;
+  font-size: 1.5vw;
+}
+
+#pName{
+  height: 2.5vw;
+  width: 20vw;
+  font-size: 1.5vw;
+}
+#apply{
+  margin-bottom: 3vw;
+  height:3vw;
+  width:15vw;
+  font-size: 1.5vw;
+}
+
+
+input[type=checkbox]
+{
+ 
+  -ms-transform: scale(2); 
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(1.5); 
+  -o-transform: scale(2); 
+  padding: 10px;
+}
+
+
+
+
+
+
+
+ 
+
+
+
