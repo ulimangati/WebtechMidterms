@@ -1,0 +1,19 @@
+html{
+    width: 100vw;
+}
+body {
+    background: #215463e3;
+    margin: 0vw;
+    border: 0vw;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    line-height: 1;
+}
+
+#banner{
+    width: 100vw;
+    opacity: 8;
+    padding-bottom: 2vw;
+}
+
+
