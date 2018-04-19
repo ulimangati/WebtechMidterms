@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Adding Players</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <a href="index.html">   
+            <img id="banner" src="banner.jpg" align="middle" alt="Site Banner"> </a>
+
+</HEAD>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app2.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="popup">
+				<p>Team Information Updated!</p>
+    		<div class="options">
+    			<a class="aa" href="StartGame.html">Okay</a>
+	 		</div>
+			</div>
+	<div class="wrapper group">
+		<button id="apply">Apply</button>
+		<a href="StartGame.html"> <button id="back" > Back </button> </a>
+	<div class="cover"></div>
+		<form class="group" id="userInput">
+			
+				<label for="pname">Player Name :</label>	
+				<input size="15" type="text" name="pname" id="pname">
+				<label for="jnum">Jersey Number :</label>
+				<input size="15" type="text" name="jnum" id="jnum">
+				<input type="submit" value="Add" id="submit">
+		</form>
+		
+	
+		<div class="tabContainer">
+		
+			<table id="checked" class="group">
+				<caption>List of Players</caption>
+				<thead>
+					<tr>
+						<th >Action</th>
+						<th >Player Name</th>
+						<th >Jersey Number</th>
+					</tr>
+				</thead>
+				<tbody id="data" class="selected">
+				</tbody>
+			</table>
+
+		</div>
+
+	</div>	
+
+</body>
+</html>
+<!-- e1c045e3bf3a3304d868e0d3 voucher number -->

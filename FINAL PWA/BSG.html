@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	   <meta charset="UTF-8">
-	   <link rel="stylesheet" type="text/css" href="Style.css">
+	   <link rel="stylesheet" type="text/css" href="css/BSG-style.css">
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	   <link href="https://fonts.googleapis.com/css?family=Bellefair|Krona+One|Open+Sans|PT+Sans|Roboto+Slab" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed|Jua|Lato|Raleway|Source+Sans+Pro|Syncopate:700" rel="stylesheet">
+         <link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="css/BSG-style.css">
         <title>Basketball Statistics Generator</title>
     </head>
-    
+    <link rel="icon" href="images/logo.ico">
 <body>
     <header>
         <a href="index.html">   
             <img id="banner" src="banner.jpg" align="middle" alt="Site Banner"> </a>
     </header>
-    
-    <nav class="topnav">
-        <li>
-		<a class="current" href="index.html">Home</a>
-        <a id="abt" href="about-us.html">How BSG works?</a>
-        <a href="contact.html">Support Us</a>
-        </li>         
-    </nav>
-
-    <div class="leftscore">
-		<strong> Score : </strong><output id ="score1"></output>
-    </div>
 		
-    <div class="rightscore">
-		<strong> Score : </strong><output id ='score2'></output>
-    </div>
-
-    <div class="left">
-	<script>
+		
+	</script>
+<div class="left">
+<table class="tg" >
+  <tr>
+    <th class="tname" colspan="8"><h1>Team 1<strong> Score : </strong><output id ="score1"></output></h1></th>
+    <script>
 	    var score1 = 0;
 		var scorevl = document.getElementById("score1");
-		var score2 = 0;
-		var scorevl2 = document.getElementById("score2");
-
 		
 		function twopoints(){
         score1 = score1 + 2;
@@ -67,46 +55,12 @@
 		score1 = score1 - 1;
         scorevl.value = score1;
 		}
-		function twopoints2(){
-        score2 = score2 + 2;
-        scorevl2.value = score2;
-		}
-		
-		function minustwo2(){
-		score2 = score2 - 2;
-        scorevl2.value = score2;
-		}
-		function threepoints2(){
-        score2 = score2 + 3;
-        scorevl2.value = score2;
-		}
-		
-		function minusthree2(){
-		score2 = score2 - 3;
-        scorevl2.value = score2;
-		}
-		function freethrow2(){
-        score2 = score2 + 1;
-        scorevl2.value = score2;
-		}
-		
-		function minusfreethrow2(){
-		score2 = score2 - 1;
-        scorevl2.value = score2;
-		}
-		
-		
 	</script>
-        
-
-<table class="tg">
-  <tr>
-    <th class="tname" colspan="8">Team Name:<input type="text"></th>
   </tr>
   <tr>
     <td class="thead">Player Name</td>
     <td class="thead">No.</td>
-    <td class="thead">Points</output></td>
+    <td class="thead">Points</td>
     <td class="thead">Assist</td>
     <td class="thead">Rebound</td>
     <td class="thead">3pt-made</td>
@@ -3299,7 +3253,40 @@
     <div class="right">
 <table class="tg">
   <tr>
-    <th class="tname" colspan="8">Team Name:<input type="text"></th>
+    <th class="tnameright" colspan="8"><h1>Team 2<strong> Score : </strong><output id ="score2"></output></h1></th>
+
+   <script>
+   		var score2 = 0;
+		var scorevl2 = document.getElementById("score2");
+
+		function twopoints2(){
+        score2 = score2 + 2;
+        scorevl2.value = score2;
+		}
+		
+		function minustwo2(){
+		score2 = score2 - 2;
+        scorevl2.value = score2;
+		}
+		function threepoints2(){
+        score2 = score2 + 3;
+        scorevl2.value = score2;
+		}
+		
+		function minusthree2(){
+		score2 = score2 - 3;
+        scorevl2.value = score2;
+		}
+		function freethrow2(){
+        score2 = score2 + 1;
+        scorevl2.value = score2;
+		}
+		
+		function minusfreethrow2(){
+		score2 = score2 - 1;
+        scorevl2.value = score2;
+		}
+   </script>
   </tr>
   <tr>
     <td class="thead">Player Name</td>
@@ -3313,7 +3300,7 @@
   </tr>
      <tr>
     <td class="tline"><input type="text" size = "5"><table>
-	<tr><th>
+	<tr style="font-size: 3vw;"><th>
 	<strong> Score : </strong><output id ="playerscore5a"></output>
 		<script>
 		var playerscore5a = 0;
